@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AndroidSerial.Views.NewItemPage"
+             xmlns:vm="clr-namespace:AndroidSerial.ViewModels"
+             BindingContext="{Binding Source={x:Static vm:DesignTimeViewModelLocator.NewItemPage}}"
+             Title="New Item">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Command="{Binding SaveItemCommand}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Text" FontSize="Medium" />
+            <Entry Text="{Binding Item.Text}" FontSize="Small" Placeholder="Text" />
+            <Label Text="Description" FontSize="Medium" />
+            <Entry Text="{Binding Item.Description}" FontSize="Small" Margin="0" Placeholder="Description"  />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
